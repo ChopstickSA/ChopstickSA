@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f4ed">
+    <meta
+      name="description"
+      content="Discover Chopstick SA — sushi, pop-up dining and private event experiences in South Africa."
+    >
+    <title>Chopstick SA | Sushi, served with a little occasion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Chopstick SA home">
+        <span class="brand-mark" aria-hidden="true">C<span>.</span></span>
+        <span class="brand-name">CHOPSTICK <span>SA</span></span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span><span></span>
+      </button>
+      <nav class="navigation" id="primary-navigation" aria-label="Main navigation">
+        <a href="#menu">The menu</a>
+        <a href="#events">Pop-ups</a>
+        <a href="#story">Our story</a>
+        <a href="#gallery">Gallery</a>
+        <a class="nav-cta" href="#enquire">Plan an event <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Sushi · Pop-ups · Good company</p>
+          <h1 id="hero-title">A little more <em>occasion.</em></h1>
+          <p class="hero-intro">
+            Thoughtful sushi and lively pop-up moments, made for sharing.
+            Find us at an upcoming gathering or bring the experience to you.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#events">Find our next pop-up <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#menu">Explore the menu <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note">
+            <span class="note-rule"></span>
+            <span>Made to gather around.</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a sushi platter" role="img">
+          <div class="art-sun"></div>
+          <span class="art-caption">A FRESH TAKE<br>ON GET-TOGETHERS</span>
+          <div class="plate">
+            <div class="plate-inner">
+              <div class="sushi sushi-one"><i></i><b></b></div>
+              <div class="sushi sushi-two"><i></i><b></b></div>
+              <div class="sushi sushi-three"><i></i><b></b></div>
+              <div class="sushi sushi-four"><i></i><b></b></div>
+              <div class="ginger"></div>
+              <div class="wasabi"></div>
+            </div>
+          </div>
+          <div class="art-stamp"><span>CHOPSTICK</span><b>SA</b></div>
+          <span class="art-spark spark-one" aria-hidden="true">✳</span>
+          <span class="art-spark spark-two" aria-hidden="true">✳</span>
+        </div>
+        <a class="scroll-cue" href="#menu"><span></span> Scroll to discover</a>
+      </section>
+
+      <section class="intro-band" aria-label="Our approach">
+        <p>Beautiful bites.</p><span aria-hidden="true">✳</span>
+        <p>Easy gatherings.</p><span aria-hidden="true">✳</span>
+        <p>Worth showing up for.</p>
+      </section>
+
+      <section class="section section-shell menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Made for the moment</p>
+            <h2 id="menu-title">On the <em>menu.</em></h2>
+          </div>
+          <p class="section-description">
+            A first look at the kinds of things we love to make. The full menu,
+            availability and prices are being added soon.
+          </p>
+        </div>
+        <div class="menu-filters" role="group" aria-label="Filter menu categories">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="rolls" aria-pressed="false">Rolls</button>
+          <button class="filter-button" type="button" data-filter="small-plates" aria-pressed="false">Small plates</button>
+          <button class="filter-button" type="button" data-filter="sharing" aria-pressed="false">For sharing</button>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card" data-category="rolls">
+            <div class="menu-art art-roll" aria-hidden="true"><span>巻</span><i></i></div>
+            <div class="menu-card-copy"><p class="card-kicker">Rolls <span>01</span></p><h3>Signature rolls</h3><p>A considered selection of rolls, prepared fresh for the table.</p><span class="placeholder-label">Menu details coming soon</span></div>
+          </article>
+          <article class="menu-card" data-category="small-plates">
+            <div class="menu-art art-plate" aria-hidden="true"><span>小皿</span><i></i></div>
+            <div class="menu-card-copy"><p class="card-kicker">Small plates <span>02</span></p><h3>A little something</h3><p>Small plates to start a meal or keep good company.</p><span class="placeholder-label">Menu details coming soon</span></div>
+          </article>
+          <article class="menu-card" data-category="sharing">
+            <div class="menu-art art-sharing" aria-hidden="true"><span>一緒に</span><i></i></div>
+            <div class="menu-card-copy"><p class="card-kicker">For sharing <span>03</span></p><h3>The sharing table</h3><p>A generous centrepiece made for passing around.</p><span class="placeholder-label">Menu details coming soon</span></div>
+          </article>
+        </div>
+        <p class="menu-footnote">Illustrative menu categories — dishes, ingredients and prices have not yet been supplied.</p>
+      </section>
+
+      <section class="event-section" id="events" aria-labelledby="events-title">
+        <div class="section-shell event-layout">
+          <div class="event-copy">
+            <p class="eyebrow eyebrow-light"><span></span> Out and about</p>
+            <h2 id="events-title">Good things<br>pop <em>up.</em></h2>
+            <p>Our pop-ups bring sushi and a little occasion to different places. Event dates and locations will appear here once confirmed.</p>
+            <a class="button button-light" href="#enquire">Ask about a pop-up <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="event-card">
+            <div class="event-card-top"><span>THE NEXT CHAPTER</span><span aria-hidden="true">✳</span></div>
+            <div class="event-card-middle">
+              <span class="event-outline">COMING<br>SOON</span>
+              <p>We’re getting the table ready.</p>
+            </div>
+            <div class="event-card-bottom"><span>DATE &amp; PLACE TO BE ANNOUNCED</span><span>CHOPSTICK SA</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-shell story-section" id="story" aria-labelledby="story-title">
+        <div class="story-art" aria-hidden="true">
+          <div class="story-circle"><span>食</span></div>
+          <span class="story-side-note">A TABLE FOR EVERY OCCASION</span>
+          <span class="story-number">01—SA</span>
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow"><span></span> A little about us</p>
+          <h2 id="story-title">Food tastes better<br>when we <em>gather.</em></h2>
+          <p>Chopstick SA is a sushi business and pop-up events bar in South Africa. We’re here to make sharing a meal feel like an occasion.</p>
+          <p class="placeholder-note">Our full story is coming soon. We’ll share more about the people and inspiration behind Chopstick SA here.</p>
+          <a class="text-link" href="#enquire">Let’s make a gathering <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-shell">
+          <div class="section-heading gallery-heading">
+            <div><p class="eyebrow"><span></span> A taste of the atmosphere</p><h2 id="gallery-title">The good <em>stuff.</em></h2></div>
+            <p class="section-description">Photos of our food and event setups will be added here as they become available.</p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-tile gallery-one"><span class="gallery-shape" aria-hidden="true">◉</span><span class="gallery-label">Sushi &amp; sharing <small>PHOTO TO BE ADDED</small></span></div>
+            <div class="gallery-tile gallery-two"><span class="gallery-shape" aria-hidden="true">✳</span><span class="gallery-label">The pop-up <small>PHOTO TO BE ADDED</small></span></div>
+            <div class="gallery-tile gallery-three"><span class="gallery-shape" aria-hidden="true">○</span><span class="gallery-label">Around the table <small>PHOTO TO BE ADDED</small></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="enquire-section section-shell" id="enquire" aria-labelledby="enquire-title">
+        <div class="enquire-copy">
+          <p class="eyebrow"><span></span> Make it an occasion</p>
+          <h2 id="enquire-title">Your gathering,<br>our <em>table.</em></h2>
+          <p>Planning a private event or catering? Tell us a little about it. This demo form does not send or store your details; contact information will be added when configured.</p>
+          <div class="contact-placeholder"><span aria-hidden="true">↗</span><span>Contact details and social links<br><b>To be added</b></span></div>
+        </div>
+        <form class="enquiry-form" id="enquiry-form">
+          <div class="form-row">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="event-type">What are you planning?</label>
+            <select id="event-type" name="eventType" required>
+              <option value="" selected disabled>Choose an enquiry type</option>
+              <option value="private-event">Private event</option>
+              <option value="catering">Catering</option>
+              <option value="pop-up">Pop-up enquiry</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">A few details</label>
+            <textarea id="message" name="message" rows="3" placeholder="Date, guest numbers or anything else you'd like to share" required></textarea>
+          </div>
+          <button class="button button-dark form-submit" type="submit">Preview enquiry <span aria-hidden="true">↗</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer">Front-end preview only — this form does not send your information.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-main">
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">C<span>.</span></span>
+          <span class="brand-name">CHOPSTICK <span>SA</span></span>
+        </a>
+        <p>Sushi, pop-ups &amp; good company.<br>South Africa</p>
+        <a class="footer-top" href="#home">Back to top ↑</a>
+      </div>
+      <div class="section-shell footer-bottom"><span>© <span id="current-year"></span> Chopstick SA</span><span>Made for gathering.</span></div>
+    </footer>
+  </body>
+</html>
