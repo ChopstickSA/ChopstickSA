@@ -26,9 +26,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .site-header { position: sticky; z-index: 10; top: 0; display: flex; align-items: center; justify-content: space-between; height: 78px; padding: 0 max(40px, calc((100vw - 1180px) / 2)); border-bottom: 1px solid rgba(255,255,255,.12); background: rgba(17,17,16,.97); color: var(--paper); backdrop-filter: blur(14px); }
 .brand { display: inline-flex; align-items: center; gap: 11px; }
-.brand-mark { display: block; width: 42px; height: 42px; object-fit: contain; }
-.brand-name { color: var(--paper); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
-.brand-name span { color: var(--red); }
+.brand-mark { display: block; width: 136px; height: 78px; object-fit: cover; object-position: center; }
 .navigation { display: flex; align-items: center; gap: 35px; font-size: 12px; font-weight: 700; }
 .navigation a:not(.nav-cta) { transition: color .2s ease; }
 .navigation a:not(.nav-cta):hover { color: var(--red); }
@@ -44,7 +42,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 h1, h2, h3, p { margin-top: 0; }
 h1, h2 { font-family: var(--sans); font-weight: 800; letter-spacing: -.055em; }
 h1 { max-width: 540px; margin-bottom: 20px; font-size: clamp(56px, 6.8vw, 88px); line-height: .99; }
-h1 em, h2 em { color: var(--red); font-weight: 800; }
+.hero h1, .section-heading h2, .story-copy h2, .event-copy h2, .enquire-copy h2 { font-family: "Arial Black", Arial, sans-serif; font-weight: 900; letter-spacing: -.045em; }
+h1 em, h2 em { color: var(--red); font-weight: 900; }
 .hero-intro { max-width: 420px; margin-bottom: 29px; color: var(--muted); font-size: 15px; }
 .hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 20px; padding: 0 18px; border: 1px solid transparent; border-radius: 4px; font-size: 11px; font-weight: 700; transition: transform .2s, background .2s; }
@@ -56,19 +55,9 @@ h1 em, h2 em { color: var(--red); font-weight: 800; }
 .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 63px; color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .note-rule { width: 38px; height: 1px; background: var(--red); }
 .hero-art { position: relative; display: grid; min-height: 480px; place-items: center; overflow: hidden; border-radius: 8px; background: var(--dark-surface); }
-.art-sun { position: absolute; top: 5%; right: 7%; width: 210px; height: 210px; border-radius: 50%; background: var(--accent); opacity: .78; }
+.hero-art::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(17,17,16,.25), transparent 40%, rgba(17,17,16,.2)); content: ""; pointer-events: none; }
+.hero-sushi-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .art-caption { position: absolute; z-index: 2; top: 11%; left: 9%; color: rgba(255,255,255,.78); font-size: 9px; font-weight: 700; letter-spacing: .16em; line-height: 1.7; }
-.plate { position: relative; z-index: 1; display: grid; width: min(360px, 72%); aspect-ratio: 1; place-items: center; border: 1px solid #d8d4cd; border-radius: 50%; background: #f7f5f1; box-shadow: 0 28px 48px rgba(37,36,34,.14); transform: rotate(-13deg); }
-.plate-inner { position: relative; width: 78%; height: 78%; border: 1px solid #e5e1db; border-radius: 50%; }
-.sushi { position: absolute; width: 93px; height: 48px; border: 7px solid #f2eee3; border-radius: 30px; background: #d78558; box-shadow: 0 4px 12px rgba(74,53,37,.17); }
-.sushi i { position: absolute; inset: 5px 18px; border-radius: 20px; background: #f7dfaa; }
-.sushi b { position: absolute; z-index: 1; top: 10px; left: 39px; width: 22px; height: 16px; border-radius: 50%; background: #d75942; }
-.sushi-one { top: 17%; left: 25%; transform: rotate(22deg); }
-.sushi-two { top: 34%; right: 11%; transform: rotate(72deg); }
-.sushi-three { bottom: 16%; left: 26%; transform: rotate(-15deg); }
-.sushi-four { top: 51%; left: 5%; transform: rotate(75deg); }
-.ginger { position: absolute; right: 24%; bottom: 18%; width: 48px; height: 28px; border-radius: 50%; background: #e7bba6; transform: rotate(-30deg); }
-.wasabi { position: absolute; right: 19%; bottom: 27%; width: 25px; height: 20px; border-radius: 55% 45% 50% 30%; background: #94a16e; }
 .art-stamp { position: absolute; z-index: 2; right: 10%; bottom: 11%; display: flex; width: 70px; height: 70px; flex-direction: column; align-items: center; justify-content: center; border: 1px solid var(--red); border-radius: 50%; color: var(--red); font-size: 7px; letter-spacing: .08em; transform: rotate(12deg); }
 .art-stamp b { font-family: var(--sans); font-size: 20px; font-weight: 700; line-height: 1; }
 .art-spark { position: absolute; color: var(--red); }
@@ -82,7 +71,7 @@ h1 em, h2 em { color: var(--red); font-weight: 800; }
 .intro-band span { color: #fff0e8; font-size: 14px; }
 .section { padding-top: 112px; padding-bottom: 112px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 38px; }
-.section-heading h2, .story-copy h2, .event-copy h2, .enquire-copy h2 { margin-bottom: 0; font-size: clamp(43px, 5vw, 60px); line-height: 1.08; }
+.section-heading h2, .story-copy h2, .event-copy h2, .enquire-copy h2 { margin-bottom: 0; font-size: clamp(48px, 5.4vw, 68px); line-height: 1.02; }
 .section-description { max-width: 355px; margin: 0 0 5px; color: var(--muted); font-size: 12px; }
 .menu-filters { display: flex; gap: 9px; margin-bottom: 25px; flex-wrap: wrap; }
 .filter-button { padding: 8px 14px; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--muted); cursor: pointer; font-size: 10px; font-weight: 700; transition: background .2s, color .2s, border .2s; }
@@ -253,7 +242,6 @@ h1 em, h2 em { color: var(--red); font-weight: 800; }
 
 .site-footer { padding: 30px 0 18px; background: var(--black); color: var(--paper); }
 .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 25px; }
-.footer-brand .brand-name span { color: var(--accent); }
 .footer-main > p { margin: 0; color: #d0ceca; font-size: 10px; }
 .footer-top { color: var(--accent); font-size: 10px; }
 .footer-bottom { display: flex; justify-content: space-between; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.16); color: #aeb3a8; font-size: 9px; }
@@ -264,6 +252,7 @@ h1 em, h2 em { color: var(--red); font-weight: 800; }
 @media (max-width: 850px) {
   .section-shell { width: min(100% - 48px, 680px); }
   .site-header { height: 70px; padding-inline: 24px; }
+  .brand-mark { width: 122px; height: 70px; }
   .navigation { gap: 17px; font-size: 10px; }
   .nav-cta { padding: 8px 10px; }
   .hero { min-height: 570px; grid-template-columns: 1fr 1fr; gap: 15px; }
@@ -283,6 +272,7 @@ h1 em, h2 em { color: var(--red); font-weight: 800; }
   html { scroll-padding-top: 72px; }
   .section-shell { width: calc(100% - 40px); }
   .site-header { height: 66px; padding-inline: 20px; }
+  .brand-mark { width: 108px; height: 62px; }
   .menu-toggle { display: flex; width: 42px; height: 42px; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 1px solid rgba(255,255,255,.35); border-radius: 4px; background: transparent; cursor: pointer; }
   .menu-toggle span { width: 17px; height: 1px; background: var(--paper); transition: transform .2s; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
@@ -297,17 +287,13 @@ h1 em, h2 em { color: var(--red); font-weight: 800; }
   .hero-intro { max-width: 370px; }
   .hero-note { margin-top: 31px; }
   .hero-art { min-height: 340px; }
-  .plate { width: min(275px, 72%); }
-  .sushi { width: 75px; height: 39px; border-width: 6px; }
-  .sushi b { top: 7px; left: 32px; }
-  .art-sun { width: 150px; height: 150px; }
   .scroll-cue { bottom: 23px; }
   .intro-band { min-height: 80px; gap: 13px; padding-inline: 13px; }
   .intro-band p { font-size: clamp(12px, 3vw, 17px); }
   .intro-band span { font-size: 10px; }
   .section { padding-block: 72px; }
   .section-heading { display: block; margin-bottom: 27px; }
-  .section-heading h2, .story-copy h2, .event-copy h2, .enquire-copy h2 { font-size: 46px; }
+  .section-heading h2, .story-copy h2, .event-copy h2, .enquire-copy h2 { font-size: clamp(44px, 11.5vw, 56px); }
   .section-description { margin-top: 15px; }
   .menu-service-note { margin-top: 0; }
   .order-layout { grid-template-columns: 1fr; }
