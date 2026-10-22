@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111110">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Order dashboard | Chopstick SA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="admin-orders.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Chopstick SA home">
+        <img class="brand-mark" src="assets/chopstick-logo.png" alt="">
+        <span class="brand-name">CHOPSTICK <span>SA</span></span>
+      </a>
+      <a class="nav-cta" href="/">View website <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="section-shell admin-orders">
+      <p class="eyebrow"><span></span> Private merchant dashboard</p>
+      <div class="admin-heading">
+        <h1>Customer orders</h1>
+        <button class="button button-dark" id="refresh-orders" type="button">Refresh orders</button>
+      </div>
+      <p class="admin-warning">Customer contact and delivery details are private. Keep this dashboard and its login credentials to authorised staff.</p>
+      <p class="admin-status" id="admin-status" role="status" aria-live="polite">Loading orders…</p>
+      <div class="admin-order-list" id="admin-order-list"></div>
+      <nav class="admin-pagination" aria-label="Order pages">
+        <button class="filter-button" id="previous-orders" type="button" disabled>Newer orders</button>
+        <span id="page-label">Page 1</span>
+        <button class="filter-button" id="next-orders" type="button" disabled>Older orders</button>
+      </nav>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-bottom"><span>© <span id="current-year"></span> Chopstick SA</span><span>Private order information</span></div>
+    </footer>
+  </body>
+</html>

@@ -1,6 +1,22 @@
 services:
   - type: web
-    name: chopstick-sa
-    runtime: static
-    buildCommand: echo "No build step required"
-    staticPublishPath: .
+    name: chopstick-sa-web
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: YOCO_SECRET_KEY
+        sync: false
+      - key: YOCO_WEBHOOK_SECRET
+        sync: false
+      - key: PUBLIC_SITE_URL
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

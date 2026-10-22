@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111110">
+    <meta name="robots" content="noindex">
+    <title>Payment status | Chopstick SA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="payment-result.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#payment-main">Skip to payment status</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Chopstick SA home">
+        <img class="brand-mark" src="assets/chopstick-logo.png" alt="">
+        <span class="brand-name">CHOPSTICK <span>SA</span></span>
+      </a>
+      <a class="nav-cta" href="/#menu">Return to menu <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="payment-result section-shell" id="payment-main">
+      <p class="eyebrow"><span></span> Secure checkout</p>
+      <h1 id="payment-title">Checking your payment…</h1>
+      <p id="payment-message" role="status" aria-live="polite">We’re checking the order status with Chopstick SA’s payment records. A redirect from Yoco alone is not payment confirmation.</p>
+      <p class="payment-order-number" id="payment-order"></p>
+      <a class="button button-dark" href="/#menu">Back to the menu <span aria-hidden="true">↗</span></a>
+      <p class="payment-contact">Questions? Call or WhatsApp <a href="tel:+27797109191">079 710 9191</a>.</p>
+    </main>
+    <footer class="site-footer">
+      <div class="section-shell footer-bottom"><span>© <span id="current-year"></span> Chopstick SA</span><span>Made for gathering.</span></div>
+    </footer>
+  </body>
+</html>
